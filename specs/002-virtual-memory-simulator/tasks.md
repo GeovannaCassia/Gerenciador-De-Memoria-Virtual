@@ -32,11 +32,11 @@
 
 **Independent Test**: Verify a trace of logical addresses resolves to correct physical addresses and returned bytes using only the core translation path.
 
-- [ ] T009 [US1] Implement page fault detection and coordination with backing store loading in `src/main.c`
-- [ ] T010 [US1] Allocate a free physical frame and copy the loaded page into physical memory in `src/memory.c`
-- [ ] T011 [US1] Update the page table after loading a page from `BACKING_STORE.bin` in `src/page_table.c`
-- [ ] T012 [US1] Complete the translation flow in `src/main.c` so a page table hit returns `physical_address = frame * 256 + offset`
-- [ ] T013 [US1] Ensure the existing output format for translated addresses and loaded bytes remains unchanged
+- [x] T009 [US1] Implement page fault detection and coordination with backing store loading in `src/main.c`
+- [x] T010 [US1] Allocate a free physical frame and copy the loaded page into physical memory in `src/memory.c`
+- [x] T011 [US1] Update the page table after loading a page from `BACKING_STORE.bin` in `src/page_table.c`
+- [x] T012 [US1] Complete the translation flow in `src/main.c` so a page table hit returns `physical_address = frame * 256 + offset`
+- [x] T013 [US1] Ensure the existing output format for translated addresses and loaded bytes remains unchanged
 
 ---
 
