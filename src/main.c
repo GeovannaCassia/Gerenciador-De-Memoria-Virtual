@@ -50,13 +50,7 @@ int main(void)
             tlb_insert(page, frame);
         }
 
-        /*
-         * TODO:
-         * A política de atualização do LRU aproximado pode ser ajustada.
-         * Nesta versão-base, a página acessada é marcada como referenciada
-         * e o aging é atualizado a cada acesso.
-         */
-
+        /* Marca página como referenciada e atualiza aging a cada acesso */
         page_table_set_reference(page);
         page_table_update_aging();
         

@@ -46,11 +46,11 @@
 
 **Independent Test**: Confirm repeated page references hit the TLB and that the oldest entries are evicted after 16 distinct pages.
 
-- [ ] T014 [US2] Implement TLB lookup, insertion and invalidation routines in `src/tlb.c` and `include/tlb.h`, returning HIT or MISS without consulting the page table
-- [ ] T015 [US2] Implement FIFO eviction logic for the 16-entry TLB in `src/tlb.c`
-- [ ] T016 [US2] Integrate TLB lookup into the translation flow in `src/main.c`
-- [ ] T017 [US2] Update TLB hit counting and statistics integration in `src/statistics.c` and `src/main.c`
-- [ ] T018 [US2] Invalidate stale TLB entries whenever a page is removed from physical memory
+- [x] T014 [US2] Implement TLB lookup, insertion and invalidation routines in `src/tlb.c` and `include/tlb.h`, returning HIT or MISS without consulting the page table
+- [x] T015 [US2] Implement FIFO eviction logic for the 16-entry TLB in `src/tlb.c`
+- [x] T016 [US2] Integrate TLB lookup into the translation flow in `src/main.c`
+- [x] T017 [US2] Update TLB hit counting and statistics integration in `src/statistics.c` and `src/main.c`
+- [x] T018 [US2] Invalidate stale TLB entries whenever a page is removed from physical memory
 
 ---
 
@@ -60,11 +60,11 @@
 
 **Independent Test**: Validate victim selection by having the simulator evict the resident page with the smallest 8-bit aging counter.
 
-- [ ] T019 [US3] Add per-page aging counter and reference bit support to `src/page_table.c` and `include/page_table.h`
-- [ ] T020 [US3] Mark the page reference bit whenever a resident page is accessed
-- [ ] T021 [US3] Implement periodic aging counter updates by shifting counters, inserting the reference bit into the most significant bit and clearing the reference bit
-- [ ] T022 [US3] Implement victim selection using the Aging algorithm when no free frames remain
-- [ ] T023 [US3] Invalidate page table entries and corresponding TLB entries for evicted pages
+- [x] T019 [US3] Add per-page aging counter and reference bit support to `src/page_table.c` and `include/page_table.h`
+- [x] T020 [US3] Mark the page reference bit whenever a resident page is accessed
+- [x] T021 [US3] Implement periodic aging counter updates by shifting counters, inserting the reference bit into the most significant bit and clearing the reference bit
+- [x] T022 [US3] Implement victim selection using the Aging algorithm when no free frames remain
+- [x] T023 [US3] Invalidate page table entries and corresponding TLB entries for evicted pages
 
 ---
 
@@ -72,9 +72,9 @@
 
 **Purpose**: Final integration, statistics, validation, and cleanup.
 
-- [ ] T024 Implement total references, page faults and TLB hits counters in `src/statistics.c` and `include/statistics.h`
-- [ ] T025 Implement final Page Fault Rate and TLB Hit Rate calculations in `src/statistics.c`
-- [ ] T026 Integrate statistics updates throughout address translation, page faults and TLB events in `src/main.c`
+- [x] T024 Implement total references, page faults and TLB hits counters in `src/statistics.c` and `include/statistics.h`
+- [x] T025 Implement final Page Fault Rate and TLB Hit Rate calculations in `src/statistics.c`
+- [x] T026 Integrate statistics updates throughout address translation, page faults and TLB events in `src/main.c`
 - [ ] T027 Run `make` (or `mingw32-make` on Windows) and execute the provided address traces to validate address translation and statistics
 - [ ] T028 Validate calculated statistics against the expected results from the provided input traces
 - [ ] T029 Perform code cleanup, resolve remaining TODOs and ensure the project compiles without warnings or errors
