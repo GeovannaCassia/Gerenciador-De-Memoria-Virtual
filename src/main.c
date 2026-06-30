@@ -12,8 +12,11 @@ int main(void)
     FILE *backing = fopen(BACKING_STORE_PATH, "rb");
 
     if (backing == NULL) {
-        fprintf(stderr, "Erro: nao foi possivel abrir %s\n", BACKING_STORE_PATH);
-        fprintf(stderr, "Execute antes: cd data && python3 generate_data.py\n");
+        fprintf(stderr,
+            "Erro: não foi possível abrir o arquivo BACKING_STORE.bin.\n\n"
+            "Gere o arquivo executando:\n\n"
+            "cd data\n"
+            "python3 generate_data.py\n");;
         return 1;
     }
 
@@ -50,7 +53,9 @@ int main(void)
             tlb_insert(page, frame);
         }
 
-        /* Marca página como referenciada e atualiza aging a cada acesso */
+        /* Toda tradução de endereço bem-sucedida marca a página como referenciada
+         * antes de executar a atualização periódica do algoritmo Aging.
+         * Marca página como referenciada e atualiza aging a cada acesso */
         page_table_set_reference(page);
         page_table_update_aging();
         
