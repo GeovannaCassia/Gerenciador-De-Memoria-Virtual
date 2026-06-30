@@ -18,11 +18,11 @@
 
 **Purpose**: Implement the core subsystems that all user stories depend on.
 
-- [ ] T004 [P] Implement physical memory frame management in `src/memory.c` and `include/memory.h`
-- [ ] T005 [P] Implement page table operations in `src/page_table.c` and `include/page_table.h`, including frame number, valid bit and page residency metadata
-- [ ] T006 [P] Implement backing store page loading from `BACKING_STORE.bin` in `src/memory.c` using random access (`fopen`, `fseek`, `fread`, `fclose`)
-- [ ] T007 Implement page number and offset extraction in `src/main.c`
-- [ ] T008 Implement the logical-to-physical address translation pipeline, connecting page extraction, page table lookup and physical address calculation (without demand paging)
+- [x] T004 [P] Implement physical memory frame management in `src/memory.c` and `include/memory.h`
+- [x] T005 [P] Implement page table operations in `src/page_table.c` and `include/page_table.h`, including frame number, valid bit and page residency metadata
+- [x] T006 [P] Implement backing store page loading from `BACKING_STORE.bin` in `src/memory.c` using random access (`fopen`, `fseek`, `fread`, `fclose`)
+- [x] T007 Implement page number and offset extraction in `src/main.c`
+- [x] T008 Implement the logical-to-physical address translation pipeline, connecting page extraction, page table lookup and physical address calculation (without demand paging)
 
 ---
 
